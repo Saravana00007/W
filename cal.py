@@ -17,3 +17,10 @@ class Cal:
     print(mul(a,b))
     print(div(a,b))
     print(rem(a,b))
+
+
+
+class Fun:
+    def fun(a):
+        print("Enter a no:",a)
+    print(fun(5))
