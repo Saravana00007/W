@@ -24,7 +24,7 @@ if pin==p:
             pass
         elif opt==2:
             print("Transcation Processing.........")
-            amt=int(input("Enter a amout to Deposit $"))
+            amt=int(input("Enter a amout to Deposit $ :"))
             bal +=amt
             time.sleep(1)
             print("Your Desopit amount $",amt)
@@ -32,16 +32,24 @@ if pin==p:
             print("Your current balance is $",bal)
             time.sleep(1)
             print("Deposit Successfully ")
-            continue
-
-
-
-            
-        else:
-            print("Trascation processing....")
-            time.sleep(4)
-            print("Invaild pin")
-            
+            continue  
+        elif opt==3:
+            print("Transcation Processing.........")
+            amt=int(input("Enter a amout to Withdirwal $:"))
+            if amt<bal:
+                bal -=amt
+                print("Trancsation procesing...")
+                time.sleep(2)
+                print("Collect you cash.....")
+                time.sleep(2)
+                print("Successfully Withdrwal cash\nPlease remove your atm card")
+            elif amt>bal:
+                print("Insufficient amount")
+            else:
+                print("Trascation processing....")
+                time.sleep(4)
+                print("Invaild pin")  
+                break
 else:
     print("Trascation processing....")
     time.sleep(4)
